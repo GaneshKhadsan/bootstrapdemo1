@@ -1,0 +1,42 @@
+<table class="table .table-responsive-md table-bordered">
+  <thead>
+      <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>City</th>
+          <th>Action</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let field of fieldArray; let i = index">
+          <td>
+              <input [(ngModel)]="field.name" class="form-control" type="text" name="{{field.name}}" />
+          </td>
+          <td>
+              <input [(ngModel)]="field.age" class="form-control" type="text" name="{{field.age}}" />
+          </td>
+          <td>
+              <input [(ngModel)]="field.city" class="form-control" type="text" name="{{field.city}}" />
+          </td>
+          <td>
+              <button class="btn btn-default"  type="button" (click)="deleteFieldValue(i)">Delete</button>
+          </td>
+      </tr>
+      <tr>
+          <td>
+              <input class="form-control" type="text" id="newAttributeName" [(ngModel)]="newAttribute.name" name="newAttributeName" />
+          </td>
+          <td>
+              <input class="form-control" type="text" id="newAttributeAge" [(ngModel)]="newAttribute.age" name="newAttributeAge" />
+          </td>
+          <td>
+              <input class="form-control" type="text" id="newAttributeCity" [(ngModel)]="newAttribute.city" name="newAttributeCity" />
+          </td>
+          <td>
+              <button class="btn btn-default" type="button" (click)="addFieldValue()">Add</button>
+          </td>
+      </tr>
+  </tbody>
+</table>
+
+<button class="btn btn-danger" type="submit" (click)="submitTable()"> Submit Table </button>
