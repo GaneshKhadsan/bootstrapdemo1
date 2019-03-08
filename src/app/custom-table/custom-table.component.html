@@ -39,4 +39,23 @@
   </tbody>
 </table>
 
-<button class="btn btn-danger" type="submit" (click)="submitTable()"> Submit Table </button>
+<button class="btn btn-danger" type="submit" (click)="submitTable()" > Submit Table </button>
+
+
+<div>
+    <table class="table .table-responsive-md table-bordered" *ngIf="fieldArray">
+      
+        <tr>
+            <th>Name</th>
+                <th>Age</th>
+                    <th>City</th>
+        </tr>
+  
+       
+        <tr *ngFor="let person of fieldArray">
+            <td>{{person.name}}</td>
+                <td>{{person.age}}</td>
+                    <td>{{person.city}}</td>
+        </tr>
+    </table>
+  </div>

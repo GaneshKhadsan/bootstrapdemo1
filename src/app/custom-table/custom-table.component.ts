@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Person } from 'src/Person';
 
 @Component({
   selector: 'app-custom-table',
@@ -8,9 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export class CustomTableComponent implements OnInit {
   fieldArray: Array<any> = [];
   newAttribute: any = {};
-
+  person: Person[];
   constructor() { }
-
+  
   ngOnInit() {
   }
 
@@ -25,6 +26,8 @@ export class CustomTableComponent implements OnInit {
 
   submitTable(){
    console.log(this.fieldArray);
-    
+   this.person = { ...this.fieldArray };
+   console.log(this.person);
+  console.log(JSON.stringify(this.person));
   }
 }

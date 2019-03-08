@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { LoginpageComponent } from './loginpage/loginpage.component';
 import { TableComponent } from './table/table.component';
 import { CustomTableComponent } from './custom-table/custom-table.component';
+import { ViewcustomtableComponent } from './viewcustomtable/viewcustomtable.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginpageComponent,
     TableComponent,
-    CustomTableComponent
+    CustomTableComponent,
+    ViewcustomtableComponent
   ],
   imports: [
     BrowserModule,
