@@ -52,10 +52,19 @@
         </tr>
   
        
-        <tr *ngFor="let person of fieldArray">
+        <tr *ngFor="let person of fieldArray | paginate: { itemsPerPage: 3, currentPage: p }; let i = index">
             <td>{{person.name}}</td>
                 <td>{{person.age}}</td>
                     <td>{{person.city}}</td>
         </tr>
+        <tfoot class="grey lighten-5 w-100">
+
+            <tr>
+              <td colspan="4">
+                <pagination-controls (pageChange)="p = $event"></pagination-controls>
+              </td>
+            </tr>
+          </tfoot>
     </table>
   </div>
+  

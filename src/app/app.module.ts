@@ -7,19 +7,20 @@ import { AppComponent } from './app.component';
 import { LoginpageComponent } from './loginpage/loginpage.component';
 import { TableComponent } from './table/table.component';
 import { CustomTableComponent } from './custom-table/custom-table.component';
-import { ViewcustomtableComponent } from './viewcustomtable/viewcustomtable.component';
+
+import {NgxPaginationModule} from 'ngx-pagination';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginpageComponent,
     TableComponent,
-    CustomTableComponent,
-    ViewcustomtableComponent
+    CustomTableComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    NgxPaginationModule,
     AppRoutingModule
   ],
   providers: [],

@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginpageComponent } from './loginpage/loginpage.component';
 import { TableComponent } from './table/table.component';
 import { CustomTableComponent } from './custom-table/custom-table.component';
-import { ViewcustomtableComponent } from './viewcustomtable/viewcustomtable.component';
+
 
 const routes: Routes = [
   { path: '', redirectTo:'/' , pathMatch: 'full' },
@@ -18,10 +18,6 @@ const routes: Routes = [
   {
     path: 'customtable',
     component: CustomTableComponent
-  },
-  {
-    path: 'viewcustomtable',
-    component: ViewcustomtableComponent
   }
 
 ];
