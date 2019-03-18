@@ -1,4 +1,5 @@
-<table class="table .table-responsive-md table-bordered">
+<div *ngIf="!show_table">
+<table class="table .table-responsive-md table-bordered" >
   <thead>
       <tr>
           <th>Name</th>
@@ -39,11 +40,14 @@
   </tbody>
 </table>
 
-<button class="btn btn-danger" type="submit" (click)="submitTable()" > Submit Table </button>
+<button class="btn btn-danger" type="submit" (click)="submitTable()"> Submit Table </button>
+</div>
+<br>
 
 
-<div>
-    <table class="table .table-responsive-md table-bordered" *ngIf="fieldArray">
+<div  *ngIf="show_table">
+        <h3> Table is as follows: </h3><br>
+    <table mdbTable class="table .table-responsive-md table-bordered z-depth-1" *ngIf="fieldArray">
       
         <tr>
             <th>Name</th>
@@ -66,5 +70,7 @@
             </tr>
           </tfoot>
     </table>
+
+    <button class="btn btn-danger" (click)="createNewTable()" style="align-content: flex-end">Go Back and Create New Table</button>
   </div>
   
